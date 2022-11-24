@@ -20,6 +20,8 @@ export const ShoppingCartDropdown: React.FC<
           x
         </button>
       </div>
+
+      {/* Products in shopping cart list */}
       {shoppingCart.map((item) => {
         return (
           <ShoppingCartProductCard
@@ -28,7 +30,7 @@ export const ShoppingCartDropdown: React.FC<
           />
         );
       })}
-
+      {/* Dropdown div */}
       <div className="absolute sticky bottom-0 right-0 bg-white pb-10">
         <div className="w-[90%] mx-auto pt-8">
           <Separator />
@@ -41,7 +43,6 @@ export const ShoppingCartDropdown: React.FC<
             </button>
           </div>
         </div>
-        {/* clear shopping cart button */}
       </div>
     </aside>
   );
