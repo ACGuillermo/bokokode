@@ -18,6 +18,10 @@ export const ShoppingCartProductCard: React.FC<
         <p className="text-xl font-bold text-gray-800/70">
           {cartProductInfo.product.price}€
         </p>
+        {/* Quantity not shown on figma */}
+        {/* <p className="text-xl font-bold text-gray-800/70">
+          Quantity: {cartProductInfo.quantity}
+        </p> */}
       </div>
       <img
         src={cartProductInfo.product.image.src}
