@@ -25,6 +25,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           className="h-full w-full aspect-[3/4]"
         />
         {/* top left div */}
+        {product.bestseller && !alsoBuy ? (
+          <div className="absolute top-0 left-0 bg-white px-8 py-1 flex justify-center items-center">
+            <span className="text-lg font-medium">Best seller</span>
+          </div>
+        ) : null}
 
         <div className="absolute bottom-0 left-0 w-full flex md:opacity-0 md:group-hover:opacity-100 transition ease-in-out duration-300">
           <button
