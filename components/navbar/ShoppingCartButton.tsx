@@ -7,7 +7,7 @@ export const ShoppingCartButton: React.FC<ShoppingCartButtonProps> = ({}) => {
   const { setisVisible } = useShoppingCart();
   return (
     <button
-      className="w-6 h-6 lg:w-8 lg:h-8"
+      className="w-6 h-6 lg:w-8 lg:h-8 hover:pointer-pointer"
       onClick={() => setisVisible((prev) => !prev)}
     >
       <svg

@@ -1,5 +1,4 @@
 import React from "react";
-import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { useAddProduct } from "../../hooks/addProduct";
 import { product } from "../../types";
 
