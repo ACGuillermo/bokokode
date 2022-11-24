@@ -10,7 +10,7 @@ export const ShoppingCartDropdown: React.FC<
 > = ({}) => {
   const { shoppingCart, clearShoppingCart, setisVisible } = useShoppingCart();
   return (
-    <aside className="fixed md:absolute top-8 right-[5%] w-[90%] mx-auto  md:top-6 md:right-5 md:w-[420px] max-h-[560px] bg-white border-2 border-gray-300 z-30 overflow-y-auto flex-row flex-wrap items-center text-black">
+    <aside className="absolute top-8 -right-16 w-[280px]  md:top-6 md:right-5 md:w-[420px] max-h-[560px] bg-white border-2 border-gray-300 z-30 overflow-y-auto flex-row flex-wrap items-center text-black">
       {/* close button */}
       <div className="flex justify-end px-8 py-2">
         <button

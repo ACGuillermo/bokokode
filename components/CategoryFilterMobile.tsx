@@ -6,13 +6,13 @@ interface CategoryFilterMobileProps {
 }
 
 export const CategoryFilterMobile: React.FC<CategoryFilterMobileProps> = ({
-  categories = [],
+  categories,
 }) => {
   const { filter, setFilter, setPagination } = useProducts();
   const [inputSelected, setInputSelected] = React.useState<string[]>([]);
   const { setIsFilterVisible } = useProducts();
 
-  const handleCategoryClicked = (category: string, filter: string[]) => {
+  const handleCategoryClicked = (category: string) => {
     if (
       inputSelected.find((cat) => cat.toLowerCase() === category.toLowerCase())
     ) {
