@@ -36,7 +36,7 @@ export const CategoryFilterMobile: React.FC<CategoryFilterMobileProps> = ({
     setIsFilterVisible(false);
   };
   return (
-    <div className="fixed bottom-0 w-full h-full bg-black/30 flex flex-row items-end touch-none">
+    <div className="fixed bottom-0 w-full h-full bg-black/30 flex flex-row items-end touch-none md:hidden">
       <div className="w-full h-[70%] bg-white absolute overflow-y-auto">
         <div className="flex flex-row justify-between items-center px-4 py-4">
           <span className="font-xl font-bold">Filter</span>
