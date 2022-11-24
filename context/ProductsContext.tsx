@@ -10,6 +10,7 @@ interface ProductContextProps {
   loading: boolean;
   sortBy: string;
   isFilterVisible: boolean;
+  maxPages: number;
   setProducts: React.Dispatch<React.SetStateAction<product[]>>;
   setFeaturedProduct: React.Dispatch<React.SetStateAction<product>>;
   setPagination: React.Dispatch<React.SetStateAction<number>>;
@@ -47,6 +48,7 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({
   const [sort, setSort] = useState("ASC");
   const [sortBy, setSortBy] = useState("price");
   const [isFilterVisible, setIsFilterVisible] = useState<boolean>(false);
+  const [maxPages, setMaxPages] = useState<number>(9);
 
   const fetchProducts = async (pagination: number, data?: requestBody) => {
     const response = await fetch(
@@ -77,6 +79,7 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({
     fetchProducts(pagination, data).then((response) => {
       setProducts(response.data.data);
       setLoading(false);
+      setMaxPages(response.data.last_page);
     });
   }, [sort, pagination, filter, sortBy]);
 
@@ -96,6 +99,7 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({
         sort,
         sortBy,
         isFilterVisible,
+        maxPages,
         setFeaturedProduct,
         setFilter,
         setPagination,

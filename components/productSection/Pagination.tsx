@@ -4,7 +4,7 @@ import { useProducts } from "../../context/ProductsContext";
 interface PaginationProps {}
 
 export const Pagination: React.FC<PaginationProps> = ({}) => {
-  const { pagination, setPagination } = useProducts();
+  const { pagination, setPagination, maxPages } = useProducts();
 
   const handleButtonClick = (option: string) => {
     const position = document.getElementById("productListSection");
@@ -51,7 +51,7 @@ export const Pagination: React.FC<PaginationProps> = ({}) => {
 
       <button
         id="productListSection-"
-        disabled={pagination === 9}
+        disabled={pagination === maxPages}
         className="relative inline-flex items-center bg-white px-20 md:px-12 py-2 text-sm font-medium text-black hover:bg-gray-100 focus:z-20 disabled:opacity-50 disabled:cursor-not-allowed"
         onClick={(e) => handleButtonClick("next")}
       >
