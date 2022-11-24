@@ -29,8 +29,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
         <div className="absolute bottom-0 left-0 w-full flex md:opacity-0 md:group-hover:opacity-100 transition ease-in-out duration-300">
           <button
-            className={`md:text-xl font-medium text-white py-3 bg-black w-full ${
-              alsoBuy ? "py-1 text-lg" : "py-4 text-2xl"
+            className={`md:text-xl font-medium text-white bg-black w-full ${
+              alsoBuy ? "py-1 text-xs sm:py-4 sm:text-lg" : "py-4 text-2xl"
             }`}
             onClick={() => handleButtonClick(product)}
           >
