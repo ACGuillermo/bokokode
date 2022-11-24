@@ -8,6 +8,10 @@
 
 Prueba técnica centrada en el desarrollo front realizada para Bokokode basada en el [documento facilitado](https://docs.google.com/document/d/1VrhfW6n4oKZPpBq30sN70nPAbc4BQXGp80MkTm_To3s/edit#heading=h.douq67z1anni)
 
+## Demo
+
+[https://bokokode.vercel.app/](https://bokokode.vercel.app/)
+
 ## Requisitios de la prueba
 
 - [x] Maquetación de la landing page
@@ -25,6 +29,10 @@ npm install
 ```
 
 ## Uso
+
+<!-- Crear .env como el ejemplo -->
+
+Crear .env.local a partir del ejemplo proporcionado en .env.local.example
 
 ```bash
 npm run dev
