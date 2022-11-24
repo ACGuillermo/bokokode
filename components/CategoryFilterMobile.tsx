@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useProducts } from "../context/ProductsContext";
 
 interface CategoryFilterMobileProps {
@@ -26,6 +26,10 @@ export const CategoryFilterMobile: React.FC<CategoryFilterMobileProps> = ({
     }
   };
 
+  useEffect(() => {
+    setInputSelected(filter);
+  }, [filter]);
+
   const handleSaveClicked = () => {
     setFilter(inputSelected);
     setPagination(1);
@@ -48,7 +52,7 @@ export const CategoryFilterMobile: React.FC<CategoryFilterMobileProps> = ({
             <div
               key={category}
               className="flex items-center m-4 cursor-pointer"
-              onClick={() => handleCategoryClicked(category, filter)}
+              onClick={() => handleCategoryClicked(category)}
             >
               {/* input label */}
               <input
