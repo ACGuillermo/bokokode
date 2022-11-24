@@ -16,7 +16,8 @@ export const FeaturedProductImage: React.FC<FeaturedProductImageProps> = ({
         width={800}
         height={800}
         className="w-full object-cover"
-        alt={""}
+        priority
+        alt={featuredProduct?.image?.alt}
       />
 
       <div className="absolute bottom-0 left-0 bg-white px-8 py-1 sm:py-4 sm:px-18 md:py-5 md:px-16 flex justify-center items-center ">

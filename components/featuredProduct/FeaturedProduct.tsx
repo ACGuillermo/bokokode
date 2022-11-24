@@ -8,7 +8,7 @@ export const FeaturedProduct: React.FC<FeaturedProductProps> = ({}) => {
   const { loading } = useProducts();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return null;
   }
   return (
     <div className="pb-16">
