@@ -26,8 +26,6 @@ export const ShoppingCartProvider: React.FC<ShoppingCartProviderProps> = ({
   const [shoppingCart, setShoppingCart] = useState<shoppingCartProduct[]>([]);
   const [isVisible, setisVisible] = useState<boolean>(false);
 
-  console.log(shoppingCart);
-
   const increaseProductQuantity = (product: product) => {
     setShoppingCart((prev) => {
       const itemInCart = shoppingCart.find(
